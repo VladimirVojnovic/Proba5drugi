@@ -28,13 +28,13 @@ function MenuService($http, ApiPath) {
   };
 
     service.getMenuItemByShortName = function (shortname) {
-      return $http.get(ApiPath + '/menu_items/' + config + '.json').then(function (response) {
-        return response.data;
-      });
+      return $http({
+                  method: 'GET',
+                  url: ApiPath + '/menu_items/' + shortname + '.json'
+            });
     };
 
 }
-
 
 
 })();
