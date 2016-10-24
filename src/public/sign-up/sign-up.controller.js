@@ -32,7 +32,7 @@ angular.module('public')
       signupCtrl.noItem = false;
       signupCtrl.formSuccess = true;
 
-      SignUpStorage.storeObject('Sign-up Users', signupCtrl.user)
+      SignUpStorage.storeObject('Sign-up-Users', signupCtrl.user)
       signupCtrl.user = {
         firstname: '',
         lastname: '',
