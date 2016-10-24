@@ -22,7 +22,7 @@ angular.module('public')
           signupCtrl.noItem = true;
           signupCtrl.httpError = failure.data.error;
         },
-      );
+      )
     } else {
       storeUser();
     }
