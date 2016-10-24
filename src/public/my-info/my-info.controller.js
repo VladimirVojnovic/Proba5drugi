@@ -5,7 +5,7 @@
   .controller('myInfoController', ['SignUpStorage', 'ApiPath', function(SignUpStorage, ApiPath) {
     var myinfoCtrl = this;
 
-    myinfoCtrl.userInfo = SignUpStorage.getObject('Sign-up Users', false);
+    myinfoCtrl.userInfo = SignUpStorage.getObject('Sign-up-Users', false);
 
     if (myinfoCtrl.userInfo) {
       if (myinfoCtrl.userInfo.dish) {
@@ -15,7 +15,7 @@
 
 
     myinfoCtrl.deleteUser = function() {
-      SignUpStorage.removeRecord('Sign-up Users');
+      SignUpStorage.removeRecord('Sign-up-Users');
       myinfoCtrl.message = 'Not Signed Up Yet. Sign up Now!';
       myinfoCtrl.userInfo = '';
     };
