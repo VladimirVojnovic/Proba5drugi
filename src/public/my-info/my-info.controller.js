@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('public')
-  .controller('MyInfoController', ['SignUpStorage', 'ApiPath', function(SignUpStorage, ApiPath) {
+  .controller('myInfoController', ['SignUpStorage', 'ApiPath', function(SignUpStorage, ApiPath) {
     var myinfoCtrl = this;
 
     myinfoCtrl.userInfo = SignUpStorage.getObject('Sign-up Users', false);
