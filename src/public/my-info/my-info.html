@@ -1,9 +1,60 @@
 <div class="container">
+  <h2 class="text-center">User Information</h2>
+  <h3 class="text-center" ng-if="!myinfoCtrl.userInfo">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h3>
 
-  First name: {{ signupCtrl.user.firstname}} <br>
-  Last name: {{ signupCtrl.user.lastname}} <br>
-  Email: {{ signupCtrl.user.email}} <br>
-  Phone: {{ signupCtrl.user.phone }} <br>
-  Favourite dish: {{ signupCtrl.user.dish }}
-
+  <div ng-if="myinfoCtrl.userInfo">
+    <table class="table table-bordered" id="userdata-table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th ng-if="myinfoCtrl.userInfo.phone">Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{myinfoCtrl.userInfo.firstname}}</td>
+          <td>{{myinfoCtrl.userInfo.lastname}}</td>
+          <td>{{myinfoCtrl.userInfo.email}}</td>
+          <td ng-if="myinfoCtrl.userInfo.phone">{{myinfoCtrl.userInfo.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
 </div>
+    <table class="table" ng-if="myinfoCtrl.userInfo.dish">
+      <thead>
+        <tr>
+          <th>Favorite Dish</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+
+            <div class="menu-item-tile">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="menu-item-photo">
+                    <div>{{myinfoCtrl.userInfo.dish.short_name}}</div>
+                    <img class="img-responsive" width="250" height="150" ng-src="{{myinfoCtrl.imageUrl}}" alt="{{myinfoCtrl.userInfo.dish.name}}">
+                  </div>
+                  <div class="menu-item-price">{{myinfoCtrl.userInfo.dish.price_small | currency}}<span> {{myinfoCtrl.userInfo.dish.small_portion_name}}</span> {{myinfoCtrl.userInfo.dish.price_large | currency}} <span>{{myinfoCtrl.userInfo.dish.large_portion_name}}</span></div>
+                </div>
+                <div class="menu-item-description col-sm-7">
+                  <h3 class="menu-item-title">{{myinfoCtrl.userInfo.dish.name}}</h3>
+                  <p class="menu-item-details">{{myinfoCtrl.userInfo.dish.description}}</p>
+                </div>
+              </div>
+            </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr ng-if="myinfoCtrl.userInfo.dish">
+
+    <div id="delete-user-button" class="text-center">
+      <button class="btn btn-primary" ng-click="myinfoCtrl.deleteUser()">Delete Profile</button>
+    </div>
+  </div>
