@@ -25,9 +25,15 @@ button  {
   font-weight: bold;
 }
 #delete-user-button {
-  margin-top: 20px; 
+  margin-top: 20px;
 }
-
+th {
+  margin-right: 50px;
+}
+td {
+  font-size: : 1.5em;
+  font-weight: bold;
+}
 #menu-tile, #specials-tile, #map-tile {
   height: 250px;
   width: 100%;
