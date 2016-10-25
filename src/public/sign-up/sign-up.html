@@ -51,16 +51,6 @@
 
         <input type="text" name="dish" placeholder="Menu number of your favourite dish"
           ng-model="signupCtrl.user.dish"
-          required
-          minlength="2"
-          ng-maxlength="4">
-          <span
-            ng-if="(regForm.dish.$error.minlength || regForm.dish.$error.required) && regForm.dish.$touched">
-            Menu number of your favorite dish must be at least 2 characters long (letter & number)
-          </span>
-          <span ng-if="regForm.dish.$error.maxlength && regForm.dish.$touched">
-            Menu number of your favorite dish must not be longer than 4 characters (2 letters & 2 numbers)
-          </span>
           <span ng-if="signupCtrl.noItem">
             No such menu number exists! ( {{ signupCtrl.httpError}} )
           </span>
