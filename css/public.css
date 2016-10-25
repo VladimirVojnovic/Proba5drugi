@@ -24,6 +24,9 @@ button  {
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
+#delete-user-button {
+  margin-top: 20px; 
+}
 
 #menu-tile, #specials-tile, #map-tile {
   height: 250px;
