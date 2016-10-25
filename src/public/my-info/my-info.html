@@ -9,7 +9,8 @@
           <div ng-if="myinfoCtrl.userInfo.phone">Phone: {{myinfoCtrl.userInfo.phone}}</div>
   </div>
 
-    <div class="favourite" ng-if="myinfoCtrl.userInfo.dish">Favorite Dish</div>
+    <div class="favourite" ng-if="myinfoCtrl.userInfo.dish">
+      <div>Favorite Dish</div>
           <div class="menu-item-tile">
               <div class="row">
                 <div class="col-sm-5">
@@ -25,11 +26,8 @@
                 </div>
               </div>
             </div>
+          </div>
 
-          </td>
-        </tr>
-      </tbody>
-    </table>
     <hr ng-if="myinfoCtrl.userInfo.dish">
 
     <div id="delete-user-button" class="text-center">
