@@ -6,15 +6,15 @@
     var service = this;
 
     service.storeObject = function (key, object) {
-      $window.SignUpStorage[key] = JSON.stringify(object);
+      $window.localStorage[key] = JSON.stringify(object);
     };
 
     service.getObject = function (key, defaultValue) {
-      return JSON.parse($window.SignUpStorage[key] || defaultValue);
+      return JSON.parse($window.localStorage[key] || defaultValue);
     };
 
     service.removeRecord = function (key) {
-      $window.SignUpStorage.removeItem(key);
+      $window.localStorage.removeItem(key);
     };
 
   }]);
