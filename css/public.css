@@ -27,12 +27,17 @@ button  {
 #delete-user-button {
   margin-top: 20px;
 }
-th {
-  margin-right: 50px;
-}
 td {
   font-size: : 1.5em;
   font-weight: bold;
+}
+th {
+  margin-right: 50px;
+  font-weight: normal;
+}
+#UserInformation {
+  padding: 10px;
+  margin-left: 30px;
 }
 #menu-tile, #specials-tile, #map-tile {
   height: 250px;
