@@ -21,8 +21,8 @@ angular.module('public')
         function (failure) {
           signupCtrl.noItem = true;
           signupCtrl.httpError = failure.data.error;
-        },
-      )
+        }
+      );
     } else {
       storeUser();
     }
