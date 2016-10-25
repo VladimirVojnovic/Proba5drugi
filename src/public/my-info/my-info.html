@@ -3,36 +3,14 @@
   <h3 class="text-center" ng-if="!myinfoCtrl.userInfo">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h3>
 
   <div ng-if="myinfoCtrl.userInfo">
-    <table class="table table-bordered" id="userdata-table">
-      <thead class="thead-inverse">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th ng-if="myinfoCtrl.userInfo.phone">Phone</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{myinfoCtrl.userInfo.firstname}}</td>
-          <td>{{myinfoCtrl.userInfo.lastname}}</td>
-          <td>{{myinfoCtrl.userInfo.email}}</td>
-          <td ng-if="myinfoCtrl.userInfo.phone">{{myinfoCtrl.userInfo.phone}}</td>
-        </tr>
-      </tbody>
-    </table>
-</div>
-    <table class="table" ng-if="myinfoCtrl.userInfo.dish">
-      <thead>
-        <tr>
-          <th>Favorite Dish</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
+          <div>First Name: {{myinfoCtrl.userInfo.firstname}}</div>
+          <div>Last Name: {{myinfoCtrl.userInfo.lastname}}</div>
+          <div>Email: {{myinfoCtrl.userInfo.email}}</div>
+          <div ng-if="myinfoCtrl.userInfo.phone">Phone: {{myinfoCtrl.userInfo.phone}}</div>
+  </div>
 
-            <div class="menu-item-tile">
+    <div class="favourite" ng-if="myinfoCtrl.userInfo.dish">Favorite Dish</div>
+          <div class="menu-item-tile">
               <div class="row">
                 <div class="col-sm-5">
                   <div class="menu-item-photo">
