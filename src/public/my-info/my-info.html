@@ -3,11 +3,24 @@
   <h3 class="text-center" ng-if="!myinfoCtrl.userInfo">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h3>
 
   <div ng-if="myinfoCtrl.userInfo">
-          <div>First Name:      {{myinfoCtrl.userInfo.firstname}}</div>
-          <div>Last Name:      {{myinfoCtrl.userInfo.lastname}}</div>
-          <div>Email:      {{myinfoCtrl.userInfo.email}}</div>
-          <div ng-if="myinfoCtrl.userInfo.phone">Phone:      {{myinfoCtrl.userInfo.phone}}</div>
-  </div>
+<table id="UserInformation">
+  <tr>
+    <td>First Name:</td>
+    <td>{{myinfoCtrl.userInfo.firstname}}</td>
+  </tr>
+  <tr>
+    <td>Last Name:</td>
+    <td>{{myinfoCtrl.userInfo.lastname}}</td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td>{{myinfoCtrl.userInfo.email}}</td>
+  </tr>
+  <tr ng-if="myinfoCtrl.userInfo.phone">
+    <td>Phone:</td>
+    <td>{{myinfoCtrl.userInfo.phone}}</td>
+  </tr>
+</table>
 
   <hr ng-if="myinfoCtrl.userInfo.dish">
     <div class="favourite" ng-if="myinfoCtrl.userInfo.dish">
